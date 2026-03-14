@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Galería de canchas de pádel construidas por Rocket Sport — videos y fotos de proyectos reales en Guadalajara.">
+    <title>Galería — Rocket Sport</title>
+    <link rel="icon" type="image/png" href="../imagenes/logo_RocketSport.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/galeria.css">
+    <script defer src="../javascript/navbar.js"></script>
+    <script defer src="../javascript/galeria.js"></script>
+</head>
+
+<body>
+
+    <!-- ═══ PAGE HERO ═════════════════════════════════════════════════════ -->
+    <section class="page-hero gal-hero">
+        <div class="page-hero-glow"></div>
+        <div class="page-hero-content">
+            <p class="page-eyebrow">Referencias</p>
+            <h1 class="page-hero-title">
+                Galería de <span class="rs-accent-text">Canchas</span>
+            </h1>
+            <p class="page-hero-sub">Videos y fotos reales de canchas de pádel construidas e instaladas por el equipo de
+                Rocket Sport.</p>
+        </div>
+    </section>
+
+    <!-- ═══ VIDEOS ════════════════════════════════════════════════════════ -->
+    <section class="vid-section">
+        <div class="vid-glow"></div>
+        <div class="vid-header">
+            <p class="page-eyebrow">Proceso y resultado</p>
+            <h2 class="vid-title">Videos</h2>
+        </div>
+        <div class="vid-grid">
+            <div class="vid-card">
+                <div class="vid-wrapper">
+                    <video src="../videos/video_canchas_construccion.mp4" muted playsinline controls id="vid1"></video>
+                </div>
+                <div class="vid-info">
+                    <h3 class="vid-name">Proceso de Construcción</h3>
+                    <p class="vid-desc">Desde la preparación del terreno hasta la estructura terminada — todo el proceso
+                        de fabricación.</p>
+                </div>
+            </div>
+            <div class="vid-card">
+                <div class="vid-wrapper">
+                    <video src="../videos/video_resultado_cancha.mp4" muted playsinline controls id="vid2"></video>
+                </div>
+                <div class="vid-info">
+                    <h3 class="vid-name">Resultado Final</h3>
+                    <p class="vid-desc">La cancha terminada, lista para jugar. Calidad profesional, entregada en tiempo
+                        récord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ GALERÍA FOTOS ═════════════════════════════════════════════════ -->
+    <section class="gallery-section">
+        <div class="gallery-glow"></div>
+        <div class="gallery-header">
+            <p class="page-eyebrow">Fotografías</p>
+            <h2 class="gallery-title">Canchas terminadas</h2>
+        </div>
+
+        <!-- Grid masonry -->
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item gallery-item--tall" data-src="../imagenes/resultado1.jpg" data-index="0">
+                <img src="../imagenes/resultado1.jpg" alt="Cancha terminada 1" loading="lazy">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-expand">⤢</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-src="../imagenes/resultado2.jpg" data-index="1">
+                <img src="../imagenes/resultado2.jpg" alt="Cancha terminada 2" loading="lazy">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-expand">⤢</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-src="../imagenes/resultado3.jpg" data-index="2">
+                <img src="../imagenes/resultado3.jpg" alt="Cancha terminada 3" loading="lazy">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-expand">⤢</span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item--wide" data-src="../imagenes/resultado4.jpg" data-index="3">
+                <img src="../imagenes/resultado4.jpg" alt="Cancha terminada 4" loading="lazy">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-expand">⤢</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ LIGHTBOX ══════════════════════════════════════════════════════ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Lightbox de imágenes">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
+        <div class="lightbox-img-wrap">
+            <img src="" alt="Imagen ampliada" id="lightboxImg">
+        </div>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Siguiente">&#10095;</button>
+    </div>
+
+    <!-- ═══ CTA ════════════════════════════════════════════════════════════ -->
+    <section class="spec-cta-section">
+        <div class="spec-cta-glow"></div>
+        <div class="spec-cta-content">
+            <p class="page-eyebrow">¿Te convenciste?</p>
+            <h2 class="spec-cta-title">Hablemos de tu proyecto</h2>
+            <p class="spec-cta-sub">Podemos construir una cancha igual para ti. Cotización sin costo en 24 horas.</p>
+            <a href="contacto.html" class="rs-btn">Solicitar cotización <span class="rs-btn-arrow">→</span></a>
+        </div>
+    </section>
+
+</body>
+
+</html>

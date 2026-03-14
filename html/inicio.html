@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rocket Sport — Construcción e instalación de canchas de pádel profesionales en la ZMG. Instalación en 5 días hábiles, envío gratis en Guadalajara.">
+    <title>Rocket Sport — Canchas de Pádel Profesionales</title>
+    <link rel="icon" type="image/png" href="../imagenes/logo_RocketSport.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+
+    <!-- Scripts (defer) -->
+    <script defer src="../javascript/navbar.js"></script>
+    <script defer src="../javascript/inicio.js"></script>
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR (inyectado por navbar.js) ═══════════════════════════════ -->
+
+    <!-- ═══ HERO SECTION ═══════════════════════════════════════════════════ -->
+    <section class="hero-section">
+        <div class="hero-glow"></div>
+
+        <div class="hero-center">
+            <p class="hero-eyebrow">Canchas de Pádel Profesionales</p>
+
+            <div class="hero-title-wrapper">
+                <!-- Línea 1: palabras rotativas -->
+                <div class="hero-title-line" id="heroLine1"
+                    style="position:relative; min-height:1.1em; width:100%; display:flex; align-items:center; justify-content:center;">
+                    <span class="palabra">CONSTRUIMOS</span>
+                    <span class="palabra">DISEÑAMOS</span>
+                    <span class="palabra">CREAMOS</span>
+                </div>
+                <!-- Línea 2: acento shimmer -->
+                <h1 class="hero-title-line hero-title-accent" id="heroLine2">TU CANCHA</h1>
+            </div>
+
+            <p class="hero-subtitle">
+                Instalación profesional en <strong>5 días hábiles</strong>.
+                Envío gratis en la ZMG.
+            </p>
+
+            <a href="#inicio-scroll" class="hero-cta" id="heroCta">
+                <span class="hero-cta-text">Ver la cancha</span>
+                <span class="hero-cta-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ WAVE DIVIDER — Hero → Scroll ═══════════════════════════════════ -->
+    <div class="wave-divider wave-divider--hero">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,0 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-deep)" />
+        </svg>
+    </div>
+
+    <!-- ═══ ANIMACIÓN SCROLL — CANCHA ══════════════════════════════════════ -->
+    <main id="inicio-scroll">
+        <img src="../frame27/ezgif-frame-001.png" alt="Cancha">
+
+        <!-- TIMELINE OVERLAY -->
+        <div class="timeline-overlay" id="timelineOverlay">
+            <button class="timeline-toggle" id="timelineToggle" title="Ocultar/Mostrar">&#9654;</button>
+
+            <div class="timeline-backdrop">
+                <div class="tl-backdrop-panel tl-panel-1"></div>
+                <div class="tl-backdrop-panel tl-panel-2"></div>
+                <div class="tl-backdrop-panel tl-panel-3"></div>
+            </div>
+
+            <div class="timeline-item" data-index="0">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">Celular</span>
+                    <h3><a href="tel:+525642377562">56 4237 7562</a></h3>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-index="1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">Correo electrónico</span>
+                    <h3><a href="mailto:jpbm@rocketsport.mx">jpbm@rocketsport.mx</a></h3>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-index="2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">WhatsApp</span>
+                    <h3><a href="https://api.whatsapp.com/send?phone=5215642377562" target="_blank"
+                            rel="noopener">Enviar mensaje</a></h3>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-index="3">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">Messenger</span>
+                    <h3><a href="https://www.facebook.com/profile.php?id=61577158997200" target="_blank"
+                            rel="noopener">Ir a Messenger</a></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══ WAVE DIVIDER — Scroll → Separador ═══════════════════════════════ -->
+    <div class="wave-divider wave-divider--sep">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,0 L0,0 Z" fill="var(--bg-deep)" />
+        </svg>
+    </div>
+
+    <!-- ═══ SEPARADOR (expandido) ════════════════════════════════════════ -->
+    <div class="section-separator">
+
+        <!-- Columna izquierda: Precio + Envío -->
+        <div class="sep-left">
+            <div class="sep-card">
+                <h4 class="sep-card-title">Precio cancha</h4>
+                <p class="sep-card-text"><strong>$<span data-counter="350000">350,000</span> MXN</strong> netos.<br>
+                    Envío gratis dentro de la ZMG.</p>
+            </div>
+            <div class="sep-card">
+                <h4 class="sep-card-title">Instalación</h4>
+                <p class="sep-card-text">Costo adicional de <strong>$<span data-counter="35000">35,000</span>
+                        MXN</strong>.
+                    Incluye mano de obra especializada y materiales de montaje.</p>
+            </div>
+            <div class="sep-card">
+                <h4 class="sep-card-title">Lista en 5 días</h4>
+                <p class="sep-card-text">Tu cancha completamente montada y operativa en tan solo
+                    <strong>5 días hábiles</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Centro: Beneficios -->
+        <div class="sep-center">
+            <h3 class="sep-center-title">Beneficios de invertir en Pádel</h3>
+            <ul class="sep-center-list">
+                <li>Rápido Retorno de Inversión</li>
+                <li>Alto Potencial de Rentabilidad</li>
+                <li>Deporte en Pleno Crecimiento</li>
+                <li>Clientes Fieles y Recurrentes</li>
+            </ul>
+            <p class="sep-center-footer">Y de invertir en <strong>ROCKET SPORT</strong></p>
+        </div>
+
+        <!-- Columna derecha: Elementos + Garantías -->
+        <div class="sep-right">
+            <div class="sep-card">
+                <h4 class="sep-card-title">Elementos incluidos</h4>
+                <p class="sep-card-text">Estructura, pasto artificial, cristal templado, red con poste y sistema de
+                    iluminación LED.</p>
+            </div>
+            <div class="sep-card">
+                <h4 class="sep-card-title">Sin sorpresas</h4>
+                <p class="sep-card-text">Presupuesto cerrado, sin costos ocultos ni imprevistos.</p>
+            </div>
+            <div class="sep-card">
+                <h4 class="sep-card-title">Vigencia</h4>
+                <p class="sep-card-text">Precios sujetos a cambios sin previo aviso. Contáctanos para asegurar tu
+                    cotización.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ═══ DESCUBRE MÁS ════════════════════════════════════════════════════ -->
+    <section class="discover-section">
+        <div class="discover-header">
+            <p class="discover-eyebrow">Explora el proyecto</p>
+            <h2 class="discover-title">Descubre más</h2>
+        </div>
+
+        <div class="discover-grid" id="discoverGrid">
+            <a href="especificaciones.html" class="discover-card" id="dc-1">
+                <h3 class="discover-card-title">Especificaciones</h3>
+                <p class="discover-card-desc">Detalles técnicos completos: estructura, superficie, iluminación y más.
+                </p>
+                <span class="discover-card-arrow">→</span>
+            </a>
+
+            <a href="colores.html" class="discover-card" id="dc-2">
+                <h3 class="discover-card-title">Colores de Pasto</h3>
+                <p class="discover-card-desc">Elige el color de pasto artificial que mejor se adapte a tu proyecto.</p>
+                <span class="discover-card-arrow">→</span>
+            </a>
+
+            <a href="galeria.html" class="discover-card" id="dc-3">
+                <h3 class="discover-card-title">Galería</h3>
+                <p class="discover-card-desc">Videos y fotos reales de canchas construidas e instaladas por nosotros.
+                </p>
+                <span class="discover-card-arrow">→</span>
+            </a>
+
+            <a href="contacto.html" class="discover-card discover-card--cta" id="dc-4">
+                <h3 class="discover-card-title">Solicitar Cotización</h3>
+                <p class="discover-card-desc">¿Listo para tu cancha? Cuéntanos tu proyecto y te respondemos en 24 h.</p>
+                <span class="discover-card-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

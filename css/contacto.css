@@ -1,0 +1,464 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CONTACTO.CSS — Rocket Sport
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Page Hero ───────────────────────────────────────────────────────────── */
+.page-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--nav-height) + 80px) var(--section-px) 60px;
+    background: var(--bg-deep);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(32, 87, 175, 0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 20%, rgba(58, 143, 212, 0.12) 0%, transparent 60%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.page-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.page-eyebrow::before,
+.page-eyebrow::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--blue-light);
+    opacity: 0.6;
+}
+
+.page-hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 10vw, 120px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 0 20px 0;
+    color: var(--white);
+    line-height: 1;
+}
+
+.page-hero-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.page-hero-sub strong {
+    color: var(--lime);
+}
+
+/* ─── Contact Layout ──────────────────────────────────────────────────────── */
+.contact-section {
+    background: var(--bg-deep);
+    padding: 80px var(--section-px) 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 20% 40%, rgba(32, 87, 175, 0.15) 0%, transparent 65%), radial-gradient(ellipse 60% 50% at 80% 70%, rgba(32, 87, 175, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* ─── Form Container ──────────────────────────────────────────────────────── */
+.form-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 48px 40px;
+}
+
+.form-header {
+    margin-bottom: 36px;
+}
+
+.form-eyebrow {
+    justify-content: flex-start;
+}
+
+.form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 8px 0 0 0;
+    color: var(--white);
+}
+
+/* ─── Form fields ─────────────────────────────────────────────────────────── */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+}
+
+.req {
+    color: var(--lime);
+}
+
+.form-input {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--white);
+    background: rgba(10, 25, 60, 0.5);
+    border: 1px solid rgba(58, 143, 212, 0.2);
+    border-radius: 12px;
+    padding: 14px 18px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+    /* for textareas */
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.form-input:focus {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 3px rgba(58, 143, 212, 0.12);
+}
+
+.form-input.is-error {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.1);
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-6px);
+    }
+
+    80% {
+        transform: translateX(6px);
+    }
+}
+
+.form-textarea {
+    min-height: 120px;
+}
+
+.form-textarea--short {
+    min-height: 80px;
+}
+
+/* ─── Radio group ─────────────────────────────────────────────────────────── */
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.radio-label {
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    background: rgba(10, 25, 60, 0.4);
+    border: 1px solid rgba(58, 143, 212, 0.15);
+    border-radius: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.radio-label input:checked+.radio-box {
+    border-color: var(--blue-light);
+    background: rgba(58, 143, 212, 0.12);
+}
+
+.radio-label:hover .radio-box {
+    border-color: rgba(58, 143, 212, 0.35);
+}
+
+.radio-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.radio-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: var(--lime);
+    letter-spacing: 1px;
+}
+
+.radio-group.is-error .radio-box {
+    border-color: #ff4d4d;
+    animation: shake 0.4s ease;
+}
+
+/* ─── Submit button ───────────────────────────────────────────────────────── */
+.form-submit {
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--white);
+    padding: 18px 24px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+    box-shadow: 0 6px 24px rgba(32, 87, 175, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.form-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.form-submit:hover::before {
+    left: 100%;
+}
+
+.form-submit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(32, 87, 175, 0.6);
+}
+
+.form-note {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin: 12px 0 0 0;
+}
+
+/* ─── Contact Channels ────────────────────────────────────────────────────── */
+.contact-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.channels-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin: 8px 0 0 0;
+}
+
+.channel-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.channel-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: var(--white);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.channel-card:hover {
+    border-color: rgba(58, 143, 212, 0.3);
+    transform: translateX(4px);
+}
+
+.channel-card--wa {
+    border-color: rgba(37, 211, 102, 0.2);
+}
+
+.channel-card--wa:hover {
+    border-color: rgba(37, 211, 102, 0.45);
+}
+
+.channel-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.channel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.channel-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+}
+
+.channel-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+/* ─── Location Card ───────────────────────────────────────────────────────── */
+.location-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 24px 24px;
+}
+
+.location-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--blue-light);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.location-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--white-60);
+    text-decoration: none;
+    line-height: 1.7;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.location-link:hover {
+    color: var(--white);
+}
+
+.location-map-link {
+    margin: 12px 0 0 0;
+}
+
+.location-map-link a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.location-map-link a:hover {
+    color: var(--blue-muted);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width:1100px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 28px 20px;
+    }
+}

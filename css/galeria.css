@@ -1,0 +1,416 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GALERIA.CSS — Rocket Sport
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Page Hero (shared structure) ───────────────────────────────────────── */
+.page-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--nav-height) + 80px) var(--section-px) 80px;
+    background: var(--bg-deep);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(32, 87, 175, 0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 20%, rgba(58, 143, 212, 0.15) 0%, transparent 60%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.page-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.page-eyebrow::before,
+.page-eyebrow::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--blue-light);
+    opacity: 0.6;
+}
+
+.page-hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 10vw, 120px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 0 20px 0;
+    color: var(--white);
+    line-height: 1;
+}
+
+.page-hero-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ─── Videos Section ──────────────────────────────────────────────────────── */
+.vid-section {
+    background: var(--bg-mid);
+    padding: 100px var(--section-px) 80px;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+    margin-bottom: -40px;
+}
+
+.vid-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(32, 87, 175, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.vid-header {
+    text-align: center;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 1;
+}
+
+.vid-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 12px 0 0 0;
+    color: var(--white);
+}
+
+.vid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.vid-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.vid-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(58, 143, 212, 0.3);
+}
+
+.vid-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+}
+
+.vid-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vid-info {
+    padding: 20px 24px 24px;
+}
+
+.vid-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin: 0 0 8px 0;
+}
+
+.vid-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ─── Photo Gallery ───────────────────────────────────────────────────────── */
+.gallery-section {
+    background: var(--bg-deep);
+    padding: 100px var(--section-px) 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(32, 87, 175, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 12px 0 0 0;
+    color: var(--white);
+}
+
+/* Masonry grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 280px 280px;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid var(--glass-border);
+}
+
+.gallery-item--tall {
+    grid-row: 1 / 3;
+}
+
+.gallery-item--wide {
+    grid-column: 2 / 4;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 10, 26, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-expand {
+    font-size: 32px;
+    color: var(--white);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* ─── Lightbox ────────────────────────────────────────────────────────────── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(2, 10, 26, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img-wrap {
+    max-width: 85vw;
+    max-height: 85vh;
+    position: relative;
+}
+
+.lightbox-img-wrap img {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(10, 25, 60, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(58, 143, 212, 0.4);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    background: rgba(10, 25, 60, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    color: var(--white);
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(58, 143, 212, 0.4);
+    box-shadow: 0 0 20px rgba(58, 143, 212, 0.3);
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────────────────── */
+.spec-cta-section {
+    background: var(--bg-mid);
+    padding: 100px var(--section-px);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+}
+
+.spec-cta-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(32, 87, 175, 0.35) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.spec-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.spec-cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 7vw, 80px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin: 0;
+}
+
+.spec-cta-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 480px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width:900px) {
+    .vid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery-item--tall {
+        grid-row: auto;
+    }
+
+    .gallery-item--wide {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width:600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item--wide {
+        grid-column: 1;
+    }
+}
