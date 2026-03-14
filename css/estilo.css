@@ -1271,6 +1271,72 @@ main#inicio-scroll {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
+   GLOBAL FOOTER
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.rs-global-footer {
+    background: var(--bg-deep);
+    border-top: 1px solid rgba(58, 143, 212, 0.1);
+    padding: 60px 4vw 20px;
+    margin-top: 40px;
+}
+
+.rs-footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.rs-footer-logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 10px rgba(58, 143, 212, 0.2));
+}
+
+.rs-footer-desc,
+.rs-footer-text,
+.rs-footer-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    color: var(--white-60);
+    line-height: 1.6;
+}
+
+.rs-footer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin: 0 0 20px 0;
+}
+
+.rs-footer-link {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.rs-footer-link:hover {
+    color: var(--blue-light);
+}
+
+.rs-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.rs-footer-bottom p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--white-40);
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════════════════════════ */
 @media (max-width:1200px) {
@@ -1296,6 +1362,11 @@ main#inicio-scroll {
 
     .ns-image-wrapper {
         display: none;
+    }
+
+    .rs-footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 

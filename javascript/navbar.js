@@ -177,9 +177,51 @@
         });
     }
 
+    // ─── Inyectar Footer dinámicamente ─────────────────────────────────────────
+    function buildFooterHTML() {
+        const isInHtml = window.location.pathname.includes('/html/');
+        const basePath = isInHtml ? '' : 'html/';
+        const imgBase = isInHtml ? '../imagenes/' : 'imagenes/';
+
+        return `
+<footer class="rs-global-footer">
+    <div class="rs-footer-content">
+        <div class="rs-footer-brand">
+            <img src="${imgBase}logo_bien_recortado.png" alt="Logo Rocket Sport" class="rs-footer-logo">
+            <p class="rs-footer-desc">Construcción profesional de canchas de pádel en la Zona Metropolitana de Guadalajara.</p>
+        </div>
+        <div class="rs-footer-links">
+            <h4 class="rs-footer-title">Contacto</h4>
+            <a href="tel:+525642377562" class="rs-footer-link">56 4237 7562</a>
+            <a href="mailto:jpbm@rocketsport.mx" class="rs-footer-link">jpbm@rocketsport.mx</a>
+            <a href="https://api.whatsapp.com/send?phone=5215642377562" target="_blank" rel="noopener noreferrer" class="rs-footer-link">WhatsApp</a>
+            <a href="https://www.facebook.com/profile.php?id=61577158997200" target="_blank" rel="noopener noreferrer" class="rs-footer-link">Facebook Messenger</a>
+        </div>
+        <div class="rs-footer-location">
+            <h4 class="rs-footer-title">Ubicación</h4>
+            <p class="rs-footer-text">Prolongación Av. Vallarta #1047<br>CP 45019, Zapopan, Jalisco, México</p>
+        </div>
+    </div>
+    <div class="rs-footer-bottom">
+        <p>&copy; ${new Date().getFullYear()} Rocket Sport. Todos los derechos reservados.</p>
+    </div>
+</footer>
+`;
+    }
+
+    function injectFooter() {
+        const container = document.createElement('div');
+        container.innerHTML = buildFooterHTML();
+        // Insertar al final del body
+        while (container.firstChild) {
+            document.body.appendChild(container.firstChild);
+        }
+    }
+
     // ─── Inicialización principal ─────────────────────────────────────────────
     function init() {
         injectNavbar();
+        injectFooter();
         initScrollBehavior();
         initDrawer();
         initTimelineToggle();
