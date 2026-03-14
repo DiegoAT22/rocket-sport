@@ -163,11 +163,26 @@
         });
     }
 
+    // ─── Timeline Overlay Toggle (funciona en todas las páginas) ─────────────
+    function initTimelineToggle() {
+        const toggle = document.getElementById('timelineToggle');
+        const overlay = document.getElementById('timelineOverlay');
+        if (!toggle || !overlay) return;
+
+        let collapsed = false;
+        toggle.addEventListener('click', () => {
+            collapsed = !collapsed;
+            overlay.classList.toggle('is-collapsed', collapsed);
+            toggle.textContent = collapsed ? '◀' : '▶';
+        });
+    }
+
     // ─── Inicialización principal ─────────────────────────────────────────────
     function init() {
         injectNavbar();
         initScrollBehavior();
         initDrawer();
+        initTimelineToggle();
     }
 
     // ─── Ejecutar cuando el DOM esté listo ───────────────────────────────────

@@ -421,7 +421,26 @@ main#inicio-scroll {
 
 .timeline-overlay.is-visible {
     pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
     transition: transform 0.5s cubic-bezier(0.65, 0.05, 0, 1);
+}
+
+/* Backdrop panels visibles sin GSAP */
+.timeline-overlay.is-visible .tl-backdrop-panel {
+    transform: translateX(0);
+}
+
+/* Items visibles sin GSAP */
+.timeline-overlay.is-visible .timeline-item {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+}
+
+/* Línea vertical visible sin GSAP */
+.timeline-overlay.is-visible::before {
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .timeline-overlay.is-collapsed {
