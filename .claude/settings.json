@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l \"/c/Users/diego/OneDrive/Documentos/Uag/Rocket Sport/javascript\"/*.js)"
+    ]
+  }
+}

@@ -5,11 +5,11 @@
 
 /* ─── CSS Variables (se heredan de :root en estilo.css) ─────────────────────── */
 :root {
-    --bg-deep: #020a1a;
-    --bg-mid: #040e28;
-    --blue-primary: #2057af;
-    --blue-light: #3a8fd4;
-    --blue-muted: #8bbcd2;
+    --bg-deep: #071a0c;
+    --bg-mid: #0d2916;
+    --blue-primary: #166534;
+    --blue-light: #22c55e;
+    --blue-muted: #86efac;
     --lime: #aaff00;
     --white: #ffffff;
     --white-60: rgba(255, 255, 255, 0.6);
@@ -29,17 +29,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5vw;
-    background: rgba(2, 10, 26, 0.75);
+    background: rgba(4, 18, 8,0.75);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(58, 143, 212, 0.08);
+    border-bottom: 1px solid rgba(34, 197, 94,0.08);
     transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* Estado: al hacer scroll > 30px */
 .rs-navbar.is-scrolled {
-    background: rgba(2, 10, 26, 0.96);
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(58, 143, 212, 0.12);
+    background: rgba(4, 18, 8,0.96);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(34, 197, 94,0.12);
 }
 
 /* ─── Logo ───────────────────────────────────────────────────────────────────── */
@@ -47,14 +47,14 @@
     height: 74px;
     width: auto;
     display: block;
-    filter: drop-shadow(0 2px 10px rgba(58, 143, 212, 0.35));
+    filter: drop-shadow(0 2px 10px rgba(34, 197, 94,0.35));
     transition: filter 0.3s ease, transform 0.3s ease;
     flex-shrink: 0;
     text-decoration: none;
 }
 
 .rs-nav-logo:hover {
-    filter: drop-shadow(0 4px 18px rgba(58, 143, 212, 0.6));
+    filter: drop-shadow(0 4px 18px rgba(34, 197, 94,0.6));
     transform: scale(1.04);
 }
 
@@ -106,7 +106,7 @@
 
 .rs-nav-link:hover {
     color: var(--white);
-    background: rgba(58, 143, 212, 0.08);
+    background: rgba(34, 197, 94,0.08);
 }
 
 .rs-nav-link:hover::after {
@@ -116,7 +116,7 @@
 /* Link activo */
 .rs-nav-link--active {
     color: var(--white);
-    background: rgba(58, 143, 212, 0.1);
+    background: rgba(34, 197, 94,0.1);
 }
 
 .rs-nav-link--active::after {
@@ -133,7 +133,7 @@
     padding: 10px 26px;
     border-radius: 50px;
     background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
-    box-shadow: 0 4px 20px rgba(32, 87, 175, 0.45);
+    box-shadow: 0 4px 20px rgba(13, 107, 46,0.45);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
     position: relative;
@@ -157,7 +157,7 @@
 
 .rs-nav-cta:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 28px rgba(32, 87, 175, 0.65), 0 0 40px rgba(170, 255, 0, 0.08);
+    box-shadow: 0 6px 28px rgba(13, 107, 46,0.65), 0 0 40px rgba(170, 255, 0, 0.08);
 }
 
 /* ─── Hamburger (Mobile) ─────────────────────────────────────────────────────── */
@@ -208,7 +208,7 @@
     position: fixed;
     inset: 0;
     z-index: 98;
-    background: rgba(2, 10, 26, 0.6);
+    background: rgba(4, 18, 8,0.6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
@@ -228,10 +228,10 @@
     bottom: 0;
     z-index: 99;
     width: min(320px, 85vw);
-    background: rgba(4, 14, 40, 0.97);
+    background: rgba(5, 20, 9,0.97);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-left: 1px solid rgba(58, 143, 212, 0.15);
+    border-left: 1px solid rgba(34, 197, 94,0.15);
     display: flex;
     flex-direction: column;
     padding: calc(var(--nav-height) + 32px) 32px 40px;
@@ -261,7 +261,7 @@
 .rs-drawer-link:hover,
 .rs-drawer-link--active {
     color: var(--white);
-    background: rgba(58, 143, 212, 0.1);
+    background: rgba(34, 197, 94,0.1);
     border-left-color: var(--blue-light);
 }
 
@@ -276,13 +276,13 @@
     background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
     text-align: center;
     margin-top: 16px;
-    box-shadow: 0 4px 20px rgba(32, 87, 175, 0.4);
+    box-shadow: 0 4px 20px rgba(13, 107, 46,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rs-drawer-cta:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 28px rgba(32, 87, 175, 0.6);
+    box-shadow: 0 6px 28px rgba(13, 107, 46,0.6);
 }
 
 /* ─── Responsive breakpoint ──────────────────────────────────────────────────── */

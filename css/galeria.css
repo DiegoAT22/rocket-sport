@@ -19,7 +19,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(32, 87, 175, 0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 20%, rgba(58, 143, 212, 0.15) 0%, transparent 60%);
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(13, 107, 46,0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 20%, rgba(34, 197, 94,0.15) 0%, transparent 60%);
 }
 
 .page-hero-content {
@@ -84,7 +84,7 @@
 .vid-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(32, 87, 175, 0.2) 0%, transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(13, 107, 46,0.2) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -124,14 +124,14 @@
 
 .vid-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(58, 143, 212, 0.3);
+    border-color: rgba(34, 197, 94,0.3);
 }
 
 .vid-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
-    background: #000;
+    background: #071a0c;
 }
 
 .vid-wrapper video {
@@ -173,7 +173,7 @@
 .gallery-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(32, 87, 175, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(13, 107, 46,0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -234,7 +234,7 @@
 .gallery-item-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(2, 10, 26, 0.4);
+    background: rgba(4, 18, 8,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +257,7 @@
     position: fixed;
     inset: 0;
     z-index: 200;
-    background: rgba(2, 10, 26, 0.95);
+    background: rgba(4, 18, 8,0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     display: flex;
@@ -293,7 +293,7 @@
     position: absolute;
     top: 24px;
     right: 24px;
-    background: rgba(10, 25, 60, 0.8);
+    background: rgba(6, 26, 11,0.8);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
@@ -311,12 +311,12 @@
 }
 
 .lightbox-close:hover {
-    background: rgba(58, 143, 212, 0.4);
+    background: rgba(34, 197, 94,0.4);
 }
 
 .lightbox-prev,
 .lightbox-next {
-    background: rgba(10, 25, 60, 0.8);
+    background: rgba(6, 26, 11,0.8);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
@@ -335,8 +335,8 @@
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-    background: rgba(58, 143, 212, 0.4);
-    box-shadow: 0 0 20px rgba(58, 143, 212, 0.3);
+    background: rgba(34, 197, 94,0.4);
+    box-shadow: 0 0 20px rgba(34, 197, 94,0.3);
 }
 
 /* ─── CTA ─────────────────────────────────────────────────────────────────── */
@@ -352,7 +352,7 @@
 .spec-cta-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(32, 87, 175, 0.35) 0%, transparent 65%);
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(13, 107, 46,0.35) 0%, transparent 65%);
     pointer-events: none;
 }
 

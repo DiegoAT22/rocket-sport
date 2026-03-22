@@ -1,0 +1,393 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CATALOGO.CSS — Rocket Sport
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FRAME SCROLL ANIMATION — Lámpara
+   ═══════════════════════════════════════════════════════════════════════════════ */
+img[alt="Lampara"] {
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+    display: block;
+}
+
+main#catalogo-scroll {
+    height: 200vh;
+    position: relative;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   INTRO DEL CATÁLOGO
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.catalogo-intro {
+    background: var(--bg-deep);
+    padding: 80px var(--section-px) 60px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.catalogo-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(13, 107, 46,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.catalogo-intro-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.catalogo-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.catalogo-eyebrow::before,
+.catalogo-eyebrow::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--blue-light);
+}
+
+.catalogo-intro-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin: 0 0 24px 0;
+    line-height: 1;
+}
+
+.catalogo-intro-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(15px, 1.8vw, 17px);
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GRID DE PRODUCTOS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.productos-section {
+    background: var(--bg-deep);
+    padding: 40px var(--section-px) 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* ─── Tarjeta de producto ──────────────────────────────────────────────────── */
+.producto-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: center;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.producto-card:hover {
+    border-color: rgba(34, 197, 94,0.25);
+    box-shadow: 0 12px 60px rgba(13, 107, 46,0.18);
+}
+
+.producto-card--featured {
+    border-color: rgba(34, 197, 94,0.3);
+    background: linear-gradient(135deg, rgba(13, 107, 46,0.15), rgba(10, 25, 60, 0.5));
+}
+
+.producto-card--reverse .producto-img-wrapper {
+    order: 2;
+}
+
+.producto-card--reverse .producto-info {
+    order: 1;
+}
+
+/* ─── Imagen / Placeholder ─────────────────────────────────────────────────── */
+.producto-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.producto-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover .producto-img-wrapper img {
+    transform: scale(1.04);
+}
+
+.producto-img-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    background: linear-gradient(135deg, rgba(13, 107, 46,0.08), rgba(34, 197, 94,0.05));
+    border-right: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.producto-card--reverse .producto-img-placeholder {
+    border-right: none;
+    border-left: 1px solid var(--glass-border);
+}
+
+.placeholder-icon {
+    font-size: 48px;
+    color: rgba(34, 197, 94,0.3);
+    line-height: 1;
+}
+
+.placeholder-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+
+/* ─── Info del producto ────────────────────────────────────────────────────── */
+.producto-info {
+    padding: clamp(28px, 4vw, 52px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.producto-tag {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid rgba(34, 197, 94,0.3);
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.producto-tag--featured {
+    background: linear-gradient(135deg, rgba(13, 107, 46,0.4), rgba(34, 197, 94,0.2));
+    border-color: rgba(34, 197, 94,0.5);
+    color: var(--white);
+}
+
+.producto-nombre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin: 0;
+    line-height: 1;
+}
+
+.producto-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.producto-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.producto-specs li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.65);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.producto-specs li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--lime);
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.producto-specs li strong {
+    color: var(--lime);
+    font-weight: 600;
+}
+
+/* ─── Precio (solo cancha completa) ───────────────────────────────────────── */
+.producto-precio {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 16px 0 4px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.precio-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--white-60);
+    text-transform: uppercase;
+}
+
+.precio-valor {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    color: var(--lime);
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.precio-moneda {
+    font-size: 0.55em;
+    color: var(--white-60);
+    letter-spacing: 3px;
+}
+
+/* ─── CTA del producto ─────────────────────────────────────────────────────── */
+.producto-cta {
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CTA FINAL
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.catalogo-cta-section {
+    background: var(--bg-mid);
+    padding: 100px var(--section-px) 80px;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+}
+
+.catalogo-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(13, 107, 46,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.catalogo-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.catalogo-cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin: 0;
+    line-height: 1;
+}
+
+.catalogo-cta-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(15px, 1.8vw, 17px);
+    font-weight: 300;
+    color: var(--white-60);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .producto-card,
+    .producto-card--reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-card--reverse .producto-img-wrapper {
+        order: 0;
+    }
+
+    .producto-card--reverse .producto-info {
+        order: 1;
+    }
+
+    .producto-img-placeholder {
+        min-height: 220px;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .producto-card--reverse .producto-img-placeholder {
+        border-left: none;
+        border-bottom: 1px solid var(--glass-border);
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-section {
+        gap: 48px;
+    }
+
+    .producto-card {
+        border-radius: 16px;
+    }
+}

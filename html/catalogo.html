@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rocket Sport — Catálogo de piezas y componentes para canchas de pádel. Compra por separado la estructura, cristal, red, pasto y más.">
+    <title>Catálogo — Rocket Sport</title>
+    <link rel="icon" type="image/png" href="../imagenes/logo_RocketSport.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+
+    <!-- Scripts (defer) -->
+    <script defer src="../javascript/navbar.js"></script>
+    <script defer src="../javascript/catalogo.js"></script>
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR (inyectado por navbar.js) ═══════════════════════════════ -->
+
+    <!-- ═══ HERO SECTION ═══════════════════════════════════════════════════ -->
+    <section class="hero-section">
+        <div class="hero-glow"></div>
+
+        <div class="hero-center">
+            <p class="hero-eyebrow">Componentes Individuales</p>
+
+            <div class="hero-title-wrapper">
+                <div class="hero-title-line" id="heroLine1"
+                    style="position:relative; min-height:1.1em; width:100%; display:flex; align-items:center; justify-content:center;">
+                    <span class="palabra">ARMA</span>
+                    <span class="palabra">EQUIPA</span>
+                    <span class="palabra">PERSONALIZA</span>
+                </div>
+                <h1 class="hero-title-line hero-title-accent" id="heroLine2">TU CANCHA</h1>
+            </div>
+
+            <p class="hero-subtitle">
+                Adquiere los componentes que necesitas.<br>
+                <strong>Piezas profesionales</strong>, los mismos estándares.
+            </p>
+
+            <a href="#catalogo-scroll" class="hero-cta" id="heroCta">
+                <span class="hero-cta-text">Ver componentes</span>
+                <span class="hero-cta-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ WAVE DIVIDER — Hero → Scroll ═══════════════════════════════════ -->
+    <div class="wave-divider wave-divider--hero">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,0 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-deep)" />
+        </svg>
+    </div>
+
+    <!-- ═══ ANIMACIÓN SCROLL — LÁMPARA ══════════════════════════════════════ -->
+    <main id="catalogo-scroll">
+        <img src="../frames_lamaparaR/ezgif-frame-001.png" alt="Lampara">
+    </main>
+
+    <!-- ═══ WAVE DIVIDER — Scroll → Catálogo ═══════════════════════════════ -->
+    <div class="wave-divider wave-divider--sep">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,0 L0,0 Z" fill="var(--bg-deep)" />
+        </svg>
+    </div>
+
+    <!-- ═══ INTRO DEL CATÁLOGO ═══════════════════════════════════════════════ -->
+    <section class="catalogo-intro">
+        <div class="catalogo-intro-content">
+            <p class="catalogo-eyebrow">Catálogo de piezas</p>
+            <h2 class="catalogo-intro-title">¿No necesitas la cancha completa?</h2>
+            <p class="catalogo-intro-text">
+                Ofrecemos cada componente por separado para que puedas renovar, reparar o
+                ampliar tu instalación existente. Todos los materiales son los mismos
+                que usamos en nuestras canchas completas — calidad profesional garantizada.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══ GRID DE PRODUCTOS ═════════════════════════════════════════════════ -->
+    <section class="productos-section">
+
+        <!-- Estructura metálica / Vigas -->
+        <article class="producto-card" id="prod-vigas">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/vigas_de_metal.png" alt="Vigas de metal galvanizado para cancha de pádel" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag">Estructura</span>
+                <h3 class="producto-nombre">Vigas de Metal</h3>
+                <p class="producto-desc">
+                    Perfiles tubulares de acero galvanizado de alta resistencia. Diseñados
+                    para soportar las condiciones de uso intensivo de una cancha profesional.
+                    Compatible con instalaciones estándar de pádel.
+                </p>
+                <ul class="producto-specs">
+                    <li>Acero galvanizado en caliente</li>
+                    <li>Tratamiento anticorrosión</li>
+                    <li>Dimensiones estándar de cancha</li>
+                    <li>Incluye herrajes de ensamble</li>
+                </ul>
+                <a href="contacto.html" class="rs-btn producto-cta">
+                    <span>Cotizar</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Panel de cristal templado -->
+        <article class="producto-card producto-card--reverse" id="prod-cristal">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/Cristal.jpg" alt="Panel de cristal templado para cancha de pádel" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag">Cerramiento</span>
+                <h3 class="producto-nombre">Panel de Cristal Templado</h3>
+                <p class="producto-desc">
+                    Paneles de vidrio templado de seguridad para las paredes laterales y
+                    traseras de la cancha. Alta transparencia para una mejor experiencia
+                    visual tanto para jugadores como espectadores.
+                </p>
+                <ul class="producto-specs">
+                    <li>Vidrio templado de seguridad</li>
+                    <li>Grosor: 10 mm</li>
+                    <li>Resistente a impactos de pelota</li>
+                    <li>Bordes pulidos y seguros</li>
+                </ul>
+                <a href="contacto.html" class="rs-btn producto-cta">
+                    <span>Cotizar</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Red con poste -->
+        <article class="producto-card" id="prod-red">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/red_poste.png" alt="Red con poste central para cancha de pádel" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag">Red</span>
+                <h3 class="producto-nombre">Red con Poste</h3>
+                <p class="producto-desc">
+                    Red de pádel profesional con poste central de acero. Cumple con las
+                    dimensiones reglamentarias de la Federación Internacional de Pádel.
+                    Sistema de tensión fácil de ajustar.
+                </p>
+                <ul class="producto-specs">
+                    <li>Altura reglamentaria (88 cm centro / 92 cm laterales)</li>
+                    <li>Poste de acero pintado</li>
+                    <li>Cinta de borde incluida</li>
+                    <li>Sistema de tensión ajustable</li>
+                </ul>
+                <a href="contacto.html" class="rs-btn producto-cta">
+                    <span>Cotizar</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Pasto artificial -->
+        <article class="producto-card producto-card--reverse" id="prod-pasto">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/Padel-azul-diamante-azul.png" alt="Pasto artificial azul para cancha de pádel" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag">Superficie</span>
+                <h3 class="producto-nombre">Pasto Artificial</h3>
+                <p class="producto-desc">
+                    Superficie de pasto artificial de alta densidad, específica para pádel.
+                    Disponible en varios colores. Relleno de arena de cuarzo incluido para
+                    el amortiguamiento y agarre óptimos.
+                </p>
+                <ul class="producto-specs">
+                    <li>Fibra monofilamento de polietileno</li>
+                    <li>Pile height: 12 mm</li>
+                    <li>Relleno de arena de cuarzo</li>
+                    <li>Varios colores disponibles</li>
+                </ul>
+                <a href="colores.html" class="rs-btn producto-cta">
+                    <span>Ver colores</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Sistema de iluminación LED -->
+        <article class="producto-card" id="prod-iluminacion">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/farol.jpg" alt="Sistema de iluminación LED para cancha de pádel" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag">Iluminación</span>
+                <h3 class="producto-nombre">Sistema LED</h3>
+                <p class="producto-desc">
+                    Sistema de iluminación LED de alta eficiencia diseñado para canchas de
+                    pádel. Iluminación uniforme sin sombras ni deslumbramientos. Bajo consumo
+                    energético y larga vida útil.
+                </p>
+                <ul class="producto-specs">
+                    <li>Luminarias LED de alta potencia</li>
+                    <li>Color de luz: 5000K (blanco neutro)</li>
+                    <li>Nivel de iluminación: 300–500 lux</li>
+                    <li>Vida útil: +50,000 horas</li>
+                </ul>
+                <a href="contacto.html" class="rs-btn producto-cta">
+                    <span>Cotizar</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- Cancha completa -->
+        <article class="producto-card producto-card--reverse producto-card--featured" id="prod-cancha">
+            <div class="producto-img-wrapper">
+                <img src="../catalogo_imagenes/cancha_completa.png" alt="Cancha de pádel completa Rocket Sport" class="producto-img">
+            </div>
+            <div class="producto-info">
+                <span class="producto-tag producto-tag--featured">Paquete completo</span>
+                <h3 class="producto-nombre">Cancha Completa</h3>
+                <p class="producto-desc">
+                    Todo incluido: estructura metálica, paneles de cristal, red con poste,
+                    pasto artificial, iluminación LED y herrajes. La opción más conveniente
+                    con precio preferencial al adquirir el conjunto.
+                </p>
+                <ul class="producto-specs">
+                    <li>Estructura + cristal + red + pasto + LED</li>
+                    <li>Instalación en <strong>5 días hábiles</strong></li>
+                    <li>Envío gratis en la ZMG</li>
+                    <li>Precio cerrado sin sorpresas</li>
+                </ul>
+                <div class="producto-precio">
+                    <span class="precio-label">Desde</span>
+                    <span class="precio-valor">$350,000 <span class="precio-moneda">MXN</span></span>
+                </div>
+                <a href="contacto.html" class="rs-btn producto-cta">
+                    <span>Solicitar cotización</span>
+                    <span class="rs-btn-arrow">→</span>
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- ═══ CTA FINAL ═════════════════════════════════════════════════════════ -->
+    <section class="catalogo-cta-section">
+        <div class="catalogo-cta-content">
+            <p class="catalogo-eyebrow">¿Tienes dudas?</p>
+            <h2 class="catalogo-cta-title">Hablemos de tu proyecto</h2>
+            <p class="catalogo-cta-text">
+                Cuéntanos qué necesitas y te enviamos una cotización personalizada en menos de 24 horas.
+            </p>
+            <a href="contacto.html" class="rs-btn">
+                <span>Contactar ahora</span>
+                <span class="rs-btn-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>

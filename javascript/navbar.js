@@ -15,6 +15,7 @@
             { file: 'especificaciones.html', label: 'Especificaciones' },
             { file: 'colores.html', label: 'Colores de Pasto' },
             { file: 'galeria.html', label: 'Galería' },
+            { file: 'catalogo.html', label: 'Catálogo' },
             { file: 'contacto.html', label: 'Contacto' },
         ];
 

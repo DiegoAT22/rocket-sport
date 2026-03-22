@@ -20,8 +20,8 @@
     inset: 0;
     pointer-events: none;
     background:
-        radial-gradient(ellipse 70% 60% at 50% 40%, rgba(32, 87, 175, 0.4) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(58, 143, 212, 0.15) 0%, transparent 60%);
+        radial-gradient(ellipse 70% 60% at 50% 40%, rgba(13, 107, 46,0.4) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(34, 197, 94,0.15) 0%, transparent 60%);
 }
 
 .page-hero-content {
@@ -155,7 +155,7 @@
 .specs-section-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(32, 87, 175, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(13, 107, 46,0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .spec-card:hover {
-    border-color: rgba(58, 143, 212, 0.3);
+    border-color: rgba(34, 197, 94,0.3);
     transform: translateY(-4px);
 }
 
@@ -264,7 +264,7 @@
 .dimensions-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 40% 50%, rgba(32, 87, 175, 0.3) 0%, transparent 65%);
+    background: radial-gradient(ellipse 70% 60% at 40% 50%, rgba(13, 107, 46,0.3) 0%, transparent 65%);
     pointer-events: none;
 }
 
@@ -356,7 +356,7 @@
 .benefits-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(32, 87, 175, 0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(13, 107, 46,0.12) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -401,7 +401,7 @@
 
 .benefit-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(58, 143, 212, 0.3);
+    border-color: rgba(34, 197, 94,0.3);
 }
 
 .benefit-icon {
@@ -438,7 +438,7 @@
 .spec-cta-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(32, 87, 175, 0.35) 0%, transparent 65%);
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(13, 107, 46,0.35) 0%, transparent 65%);
     pointer-events: none;
 }
 
@@ -484,7 +484,7 @@
 /* ─── Price col note (ZMG note) ─────────────────────────────────────────────── */
 .price-col--note {
     justify-content: center;
-    background: rgba(58, 143, 212, 0.06);
+    background: rgba(34, 197, 94,0.06);
 }
 
 .price-note-text {
