@@ -5,16 +5,16 @@
 
 /* ─── CSS Variables (se heredan de :root en estilo.css) ─────────────────────── */
 :root {
-    --bg-deep: #071a0c;
-    --bg-mid: #0d2916;
-    --blue-primary: #166534;
-    --blue-light: #22c55e;
-    --blue-muted: #86efac;
-    --lime: #aaff00;
+    --bg-deep: #111111;
+    --bg-mid: #1e1e1e;
+    --blue-primary: rgba(34, 83, 159, 1);
+    --blue-light: rgba(183, 205, 19, 1);
+    --blue-muted: rgba(183, 205, 19, 0.55);
+    --lime: rgba(183, 205, 19, 1);
     --white: #ffffff;
     --white-60: rgba(255, 255, 255, 0.6);
     --white-40: rgba(255, 255, 255, 0.4);
-    --nav-height: 68px;
+    --nav-height: 90px;
 }
 
 /* ─── Navbar base ────────────────────────────────────────────────────────────── */
@@ -29,33 +29,34 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5vw;
-    background: rgba(4, 18, 8,0.75);
+    background: rgba(15, 15, 15, 0.75);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(34, 197, 94,0.08);
+    border-bottom: 2px solid rgba(183, 205, 19, 0.4);
     transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* Estado: al hacer scroll > 30px */
 .rs-navbar.is-scrolled {
-    background: rgba(4, 18, 8,0.96);
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(34, 197, 94,0.12);
+    background: rgba(15, 15, 15, 0.96);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(183, 205, 19, 0.12);
 }
 
 /* ─── Logo ───────────────────────────────────────────────────────────────────── */
 .rs-nav-logo {
-    height: 74px;
+    height: 120px;
     width: auto;
     display: block;
-    filter: drop-shadow(0 2px 10px rgba(34, 197, 94,0.35));
-    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     flex-shrink: 0;
     text-decoration: none;
 }
 
 .rs-nav-logo:hover {
-    filter: drop-shadow(0 4px 18px rgba(34, 197, 94,0.6));
+    filter: none;
     transform: scale(1.04);
+    opacity: 0.9;
 }
 
 .rs-nav-logo img {
@@ -106,7 +107,7 @@
 
 .rs-nav-link:hover {
     color: var(--white);
-    background: rgba(34, 197, 94,0.08);
+    background: rgba(183, 205, 19, 0.08);
 }
 
 .rs-nav-link:hover::after {
@@ -116,7 +117,7 @@
 /* Link activo */
 .rs-nav-link--active {
     color: var(--white);
-    background: rgba(34, 197, 94,0.1);
+    background: rgba(183, 205, 19, 0.1);
 }
 
 .rs-nav-link--active::after {
@@ -133,7 +134,7 @@
     padding: 10px 26px;
     border-radius: 50px;
     background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
-    box-shadow: 0 4px 20px rgba(13, 107, 46,0.45);
+    box-shadow: 0 4px 20px rgba(183, 205, 19, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
     position: relative;
@@ -157,7 +158,7 @@
 
 .rs-nav-cta:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 28px rgba(13, 107, 46,0.65), 0 0 40px rgba(170, 255, 0, 0.08);
+    box-shadow: 0 6px 28px rgba(183, 205, 19, 0.5), 0 0 40px rgba(183, 205, 19, 0.12);
 }
 
 /* ─── Hamburger (Mobile) ─────────────────────────────────────────────────────── */
@@ -208,7 +209,7 @@
     position: fixed;
     inset: 0;
     z-index: 98;
-    background: rgba(4, 18, 8,0.6);
+    background: rgba(15, 15, 15, 0.6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
@@ -228,10 +229,10 @@
     bottom: 0;
     z-index: 99;
     width: min(320px, 85vw);
-    background: rgba(5, 20, 9,0.97);
+    background: rgba(15, 15, 15, 0.97);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-left: 1px solid rgba(34, 197, 94,0.15);
+    border-left: 1px solid rgba(183, 205, 19, 0.15);
     display: flex;
     flex-direction: column;
     padding: calc(var(--nav-height) + 32px) 32px 40px;
@@ -261,7 +262,7 @@
 .rs-drawer-link:hover,
 .rs-drawer-link--active {
     color: var(--white);
-    background: rgba(34, 197, 94,0.1);
+    background: rgba(183, 205, 19, 0.1);
     border-left-color: var(--blue-light);
 }
 
@@ -276,13 +277,13 @@
     background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
     text-align: center;
     margin-top: 16px;
-    box-shadow: 0 4px 20px rgba(13, 107, 46,0.4);
+    box-shadow: 0 4px 20px rgba(183, 205, 19, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rs-drawer-cta:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 28px rgba(13, 107, 46,0.6);
+    box-shadow: 0 6px 28px rgba(183, 205, 19, 0.5);
 }
 
 /* ─── Responsive breakpoint ──────────────────────────────────────────────────── */

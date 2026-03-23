@@ -35,7 +35,7 @@ main#catalogo-scroll {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(13, 107, 46,0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(34, 83, 159, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -116,13 +116,13 @@ main#catalogo-scroll {
 }
 
 .producto-card:hover {
-    border-color: rgba(34, 197, 94,0.25);
-    box-shadow: 0 12px 60px rgba(13, 107, 46,0.18);
+    border-color: rgba(183, 205, 19, 0.25);
+    box-shadow: 0 12px 60px rgba(34, 83, 159, 0.18);
 }
 
 .producto-card--featured {
-    border-color: rgba(34, 197, 94,0.3);
-    background: linear-gradient(135deg, rgba(13, 107, 46,0.15), rgba(10, 25, 60, 0.5));
+    border-color: rgba(183, 205, 19, 0.3);
+    background: linear-gradient(135deg, rgba(34, 83, 159, 0.15), rgba(10, 25, 60, 0.5));
 }
 
 .producto-card--reverse .producto-img-wrapper {
@@ -157,7 +157,7 @@ main#catalogo-scroll {
     width: 100%;
     height: 100%;
     min-height: 280px;
-    background: linear-gradient(135deg, rgba(13, 107, 46,0.08), rgba(34, 197, 94,0.05));
+    background: linear-gradient(135deg, rgba(34, 83, 159, 0.08), rgba(183, 205, 19, 0.05));
     border-right: 1px solid var(--glass-border);
     display: flex;
     flex-direction: column;
@@ -173,7 +173,7 @@ main#catalogo-scroll {
 
 .placeholder-icon {
     font-size: 48px;
-    color: rgba(34, 197, 94,0.3);
+    color: rgba(183, 205, 19, 0.3);
     line-height: 1;
 }
 
@@ -201,14 +201,14 @@ main#catalogo-scroll {
     text-transform: uppercase;
     display: inline-block;
     padding: 4px 12px;
-    border: 1px solid rgba(34, 197, 94,0.3);
+    border: 1px solid rgba(183, 205, 19, 0.3);
     border-radius: 20px;
     width: fit-content;
 }
 
 .producto-tag--featured {
-    background: linear-gradient(135deg, rgba(13, 107, 46,0.4), rgba(34, 197, 94,0.2));
-    border-color: rgba(34, 197, 94,0.5);
+    background: linear-gradient(135deg, rgba(34, 83, 159, 0.4), rgba(183, 205, 19, 0.2));
+    border-color: rgba(183, 205, 19, 0.5);
     color: var(--white);
 }
 
@@ -318,7 +318,7 @@ main#catalogo-scroll {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(13, 107, 46,0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(34, 83, 159, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
